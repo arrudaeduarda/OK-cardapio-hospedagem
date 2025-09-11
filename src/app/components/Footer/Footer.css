@@ -1,0 +1,66 @@
+.cta-footer-container {
+  position: relative; /* Essencial para a sobreposição de cor */
+  width: 100%;
+  height: 50vh; /* 50% da altura da tela, ajuste conforme necessário */
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* --- Imagem de Fundo --- */
+  background-image: url('/fundo.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+/* --- Sobreposição de Cor (Overlay) --- */
+/* Esta camada fica entre a imagem de fundo e o texto para garantir a leitura */
+.cta-footer-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(245, 245, 245, 0.75); /* Cor cinza-claro com 75% de opacidade */
+  z-index: 1;
+}
+
+.cta-footer-content {
+  position: relative; /* Garante que o conteúdo fique acima da sobreposição */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre os elementos */
+  padding: 1rem;
+}
+
+.cta-footer-title {
+  font-family: sans-serif;
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #1f2937; /* Cinza escuro, quase preto */
+  margin: 0;
+}
+
+.cta-footer-subtitle {
+  font-family: sans-serif;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 400;
+  color: #374151; /* Cinza um pouco mais claro */
+  margin: 0;
+  margin-bottom: 1rem; /* Espaço extra antes do botão */
+}
+
+/* Ajustes para telas menores (mobile) */
+@media (max-width: 768px) {
+  .cta-footer-title {
+    font-size: 1.75rem;
+  }
+
+  .cta-footer-subtitle {
+    font-size: 1.125rem;
+  }
+}

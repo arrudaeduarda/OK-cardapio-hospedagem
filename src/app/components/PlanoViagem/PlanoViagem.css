@@ -1,0 +1,132 @@
+/* Definindo variáveis de cor para facilitar a customização */
+:root {
+  --primary-color: #3b82f6; /* Azul Principal */
+  --primary-color-light: #eff6ff; /* Fundo do ícone ativo (Azul claro) */
+  --text-color-dark: #1f2937; /* Títulos */
+  --text-color-light: #6b7280; /* Subtítulos e descrições */
+  --background-color: #a2a4a7; /* Cor de fundo geral */
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.planner-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Começa com uma coluna para mobile */
+  gap: 80px;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 2rem;
+  font-family: sans-serif;
+  background-image: var(--background-color);
+}
+
+/* Layout para telas maiores */
+@media (min-width: 992px) {
+  .planner-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.planner-image-wrapper {
+  width: 100%;
+}
+
+.planner-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 1.5rem; /* Bordas bem arredondadas */
+  object-fit: cover;
+  box-shadow: var(--card-shadow);
+}
+
+.planner-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.planner-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-color-dark);
+  margin-bottom: 1rem;
+}
+
+.planner-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-color-light);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden; /* Garante que a barra lateral não vaze */
+}
+
+/* Barra lateral azul para o item ativo */
+.step-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 0 4px 4px 0;
+}
+
+.step-item.active {
+  background-color: #ffffff;
+  box-shadow: var(--card-shadow);
+}
+
+.step-icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 0.75rem;
+  color: var(--text-color-light);
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.step-item.active .step-icon-wrapper {
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+}
+
+.step-text-content {
+  text-align: left;
+}
+
+.step-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.step-description {
+  font-size: 0.95rem;
+  color: var(--text-color-light);
+  line-height: 1.5;
+  margin: 0;
+}
