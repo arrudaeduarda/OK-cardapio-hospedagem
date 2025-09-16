@@ -1,22 +1,22 @@
 export const destinos = [
   {
-    imagem: '/casa01.png',
-    titulo: 'Refúgio Familiar com Piscina',
-    descricao: 'Casa espaçosa com 3 quartos, piscina e churrasqueira a 200m da praia. Perfeita para o conforto da sua família nas férias.'
+    imagem: '/venencia.jpg',
+    titulo: 'Passeio pela cidade apaixonante da Itália',
+    descricao: 'Viagem completa em pacote, planejada pelos nossos desenvolvedores, pensando diretamente na experiência do cliente. Perfeita para o conforto da sua família nas férias.'
   },
   {
-    imagem: '/casa02.png',
-    titulo: 'Sobrado Espaçoso para Grupos',
-    descricao: 'Acomoda até 12 pessoas! Sobrado com 4 quartos, ampla área de lazer com churrasqueira e salão de jogos. Reúna os amigos!'
+    imagem: '/naples.jpg',
+    titulo: 'Descubra a Encantadora Nápoles!',
+    descricao: 'Pacote em Nápoles, com tudo incluso! Pensado para suprir as suas necessidades, e realizar seus sonhos.'
   },
   {
-    imagem: '/casa03.png',
-    titulo: 'Charme e Sossego: Pé na Areia',
-    descricao: 'Acorde com o som das ondas. Casa com acesso direto à praia, varanda com rede e vista para o mar. Ideal para casais e pequenas famílias.'
+    imagem: '/florencia.jpg',
+    titulo: 'Explore a Romântica Florença!',
+    descricao: 'Pacote em Florença, com tudo incluso! Pensado para suprir suas necessidades e realizar seus sonhos.'
   },
   {
-    imagem: '/casa04.png',
-    titulo: 'Conforto a Poucos Passos do Mar',
-    descricao: 'Casa recém-reformada com ar-condicionado, Wi-Fi e cozinha completa. Todo o conforto que você precisa a apenas 3 quadras da praia.'
+    imagem: '/roma.jpg',
+    titulo: 'Conheça Roma e todos os seus encantos!',
+    descricao: 'Viva a História de Roma, a Cidade Eterna! Descubra sua hisória milenar, por meio de sua arte e arquitetura.'
   }
 ];
